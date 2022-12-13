@@ -22,7 +22,7 @@ class MayoristaController extends Controller
     {
         //$texto = trim($request->get('texto'));
 
-        $mayoristas = User::mayor()->paginate(5);
+        $mayoristas = User::mayor()->get();
         
         return view('mayorista.index', compact('mayoristas'));
             
